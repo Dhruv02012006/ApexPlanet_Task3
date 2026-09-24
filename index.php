@@ -136,9 +136,11 @@ if ($search != "") {
             </strong>
         </p>
 
-        <a href="create.php">Create New Post</a>
+        <?php if ($_SESSION["role"] === "admin"): ?>
+    <a href="create.php">Create New Post</a>
+<?php endif; ?>
 
-        <a href="logout.php">Logout</a>
+<a href="logout.php">Logout</a>
 
     </div>
 
